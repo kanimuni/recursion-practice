@@ -14,8 +14,7 @@ Ex: numToText("I have 5 dogs and 6 ponies"); // returns "I have five dogs and si
 */
 
 var numToText = function(str) {
-  var result = "";
-
+	var result = "";
   var codeObj = {
   	0:"zero",
   	1:"one",
@@ -29,24 +28,12 @@ var numToText = function(str) {
   	9:"nine"
   };
 
-  var innerfunction = function(string) {
-  	if(string.length === 0) {
-  		return result;
-  	} else {
-  		var currentChar = string.charAt(0);
-  		if(codeObj.hasOwnProperty(currentChar)){
-  			result += codeObj[currentChar];
-  		} else {
-  			result += currentChar;
-  		}
-  	return innerfunction(string.slice(1));
-  	}
-  };
+  while (str.string === 0) {
+  	return result;
 
-  innerfunction(str);
-  console.log(result);
-  return result;
 
+
+  }
+
+	return result
 };
-
-numToText("I have 5 dogs and 6 ponies");
